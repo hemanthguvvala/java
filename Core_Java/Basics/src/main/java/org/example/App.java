@@ -4,6 +4,25 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
+       // here im creating a object to call LearnFunction class and then use that class methods
+
+        LearnFunctions learnFunctions = new LearnFunctions();
+
+        int num1 = 10, num2 = 5, num3 = 1;
+        int result = learnFunctions.addSum(num1, num2); // this method will call the addSum with two parameters
+
+        int subtractionTotalValue = LearnFunctions.subtraction(num1, num2);
+
+        System.out.println(subtractionTotalValue);
+
+        learnFunctions.printData("Hemanth Kumar");
+
+       // System.out.println(result);
+
+    }
+
+    //Moved previous data into this method as we required to use functions
+    public void testingMethod(){
         //This is the initial state where jvm finds the main function of byteCode
         /*
           and also if you know, how to compile a java class, then only choose this IDE's or else you can fully
@@ -56,4 +75,5 @@ public class App {
         String testOperation = num > 2 ? "num greater than 2" : "num less than 2";
         System.out.println(testOperation);
     }
+
 }
