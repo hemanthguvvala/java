@@ -1,24 +1,43 @@
 package org.example;
 
 import java.util.Scanner;
+import org.example.datastructures.LearnArrays;
 
 public class App {
     public static void main(String[] args) {
-       // here im creating a object to call LearnFunction class and then use that class methods
+        LearnArrays learnArrays = new LearnArrays();
 
-        LearnFunctions learnFunctions = new LearnFunctions();
+        int[] randomArray = {2,8,9,7,5,3,10,1};
 
-        int num1 = 10, num2 = 5, num3 = 1;
-        int result = learnFunctions.addSum(num1, num2); // this method will call the addSum with two parameters
+        System.out.println("Sorting array with selection Sort - ");
+        LearnArrays.printArray( LearnArrays.selectionSort(randomArray));
 
-        int subtractionTotalValue = LearnFunctions.subtraction(num1, num2);
+        System.out.println("Sorting array with Bubble Sort - ");
+        LearnArrays.printArray( LearnArrays.bubbleSort(randomArray));
 
-        System.out.println(subtractionTotalValue);
 
-        learnFunctions.printData("Hemanth Kumar");
-
-       // System.out.println(result);
-
+//        int num1 = 10;
+//        int num2 = 5;
+//        int num3 = 4;
+//        learnArrays.insertIntoUserData(num1);
+//        learnArrays.insertIntoUserData(num2);
+//        learnArrays.insertIntoUserData(num3);
+//        learnArrays.printArray();
+//
+//        learnArrays.deleteValueInArray(5);
+//
+//        learnArrays.printArray();
+//
+//        System.out.println("Printing two different Arrays with different Object initialization");
+//
+//        LearnArrays anotherArrayObject = new LearnArrays();
+//
+//        int n = 20;
+//        int n2 = 7;
+//        anotherArrayObject.insertIntoUserData(n);
+//        anotherArrayObject.insertIntoUserData(n2);
+//
+//        anotherArrayObject.printArray();
     }
 
     //Moved previous data into this method as we required to use functions
@@ -74,6 +93,23 @@ public class App {
         //Ternary Operator - condition ? true : false;
         String testOperation = num > 2 ? "num greater than 2" : "num less than 2";
         System.out.println(testOperation);
+    }
+
+    public void testingFunction(){
+        // here im creating a object to call LearnFunction class and then use that class methods
+
+        LearnFunctions learnFunctions = new LearnFunctions();
+
+        int num1 = 10, num2 = 5, num3 = 1;
+        int result = learnFunctions.addSum(num1, num2); // this method will call the addSum with two parameters
+
+        int subtractionTotalValue = LearnFunctions.subtraction(num1, num2);
+
+        System.out.println(subtractionTotalValue);
+
+        learnFunctions.printData("Hemanth Kumar");
+
+        // System.out.println(result);
     }
 
 }
